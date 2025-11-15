@@ -1,0 +1,991 @@
+{
+  "metadata": {
+    "analysis_date": "2025-11-15T13:19:26.725649",
+    "total_records": 195,
+    "date_range": {
+      "start": "2025-01-02",
+      "end": "2025-11-28"
+    }
+  },
+  "data_quality": {
+    "total_records": 195,
+    "null_values": {
+      "id": 0,
+      "sale_date": 0,
+      "product": 0,
+      "revenue": 0,
+      "closer": 0,
+      "country": 0,
+      "cash_collected": 0,
+      "upsell": 0,
+      "year_month": 0,
+      "month": 0,
+      "quarter": 0,
+      "cash_collection_rate": 0
+    },
+    "duplicate_records": "0",
+    "date_range": {
+      "min": "2025-01-02",
+      "max": "2025-11-28"
+    },
+    "data_types": {
+      "id": "int64",
+      "sale_date": "datetime64[ns]",
+      "product": "object",
+      "revenue": "float64",
+      "closer": "object",
+      "country": "object",
+      "cash_collected": "float64",
+      "upsell": "bool",
+      "year_month": "period[M]",
+      "month": "int32",
+      "quarter": "int32",
+      "cash_collection_rate": "float64"
+    },
+    "negative_values": {
+      "revenue": "0",
+      "cash_collected": "0"
+    },
+    "invalid_rates": {
+      "cash_collection_over_100": "0"
+    }
+  },
+  "summary_statistics": {
+    "numeric_summary": {
+      "revenue": {
+        "count": 195.0,
+        "mean": 22461.53846153846,
+        "std": 10665.59686017723,
+        "min": 15000.0,
+        "25%": 15000.0,
+        "50%": 15000.0,
+        "75%": 25000.0,
+        "max": 50000.0
+      },
+      "cash_collected": {
+        "count": 195.0,
+        "mean": 20180.265435897436,
+        "std": 9525.813405008108,
+        "min": 12806.41,
+        "25%": 13442.779999999999,
+        "50%": 14223.58,
+        "75%": 22720.690000000002,
+        "max": 47288.61
+      },
+      "cash_collection_rate": {
+        "count": 195.0,
+        "mean": 89.95078615384617,
+        "std": 2.844847787004473,
+        "min": 85.18232,
+        "25%": 87.80175,
+        "50%": 89.97386666666667,
+        "75%": 91.91542666666666,
+        "max": 94.99973333333332
+      }
+    },
+    "categorical_counts": {
+      "products": {
+        "Elite Business Accelerator": 102,
+        "Executive Leadership Mastery": 72,
+        "Scale to 7-Figures Program": 21
+      },
+      "closers": {
+        "Sarah Mitchell": 81,
+        "Marcus Thompson": 59,
+        "Julia Rodriguez": 55
+      },
+      "countries": {
+        "US": 116,
+        "EU": 40,
+        "UK": 39
+      },
+      "upsell": {
+        "false": 146,
+        "true": 49
+      }
+    },
+    "totals": {
+      "total_revenue": 4380000.0,
+      "total_cash_collected": 3935151.76,
+      "average_deal_size": 22461.53846153846,
+      "median_deal_size": 15000.0
+    }
+  },
+  "business_metrics": {
+    "overall": {
+      "total_sales_count": 195,
+      "total_revenue": 4380000.0,
+      "total_cash_collected": 3935151.76,
+      "overall_cash_collection_rate": 89.84364748858447,
+      "upsell_count": 49,
+      "upsell_rate": 25.128205128205128,
+      "average_deal_size": 22461.53846153846,
+      "median_deal_size": 15000.0
+    },
+    "by_product": {
+      "Scale to 7-Figures Program": {
+        "count": 21,
+        "total_revenue": 1050000.0,
+        "avg_deal_size": 50000.0,
+        "cash_collection_rate": 89.3558238095238,
+        "upsell_rate": 33.33333333333333
+      },
+      "Executive Leadership Mastery": {
+        "count": 72,
+        "total_revenue": 1800000.0,
+        "avg_deal_size": 25000.0,
+        "cash_collection_rate": 89.90638333333334,
+        "upsell_rate": 29.166666666666668
+      },
+      "Elite Business Accelerator": {
+        "count": 102,
+        "total_revenue": 1530000.0,
+        "avg_deal_size": 15000.0,
+        "cash_collection_rate": 90.10462156862745,
+        "upsell_rate": 20.588235294117645
+      }
+    },
+    "by_closer": {
+      "Sarah Mitchell": {
+        "count": 81,
+        "total_revenue": 1815000.0,
+        "avg_deal_size": 22407.40740740741,
+        "cash_collection_rate": 90.11454214876032,
+        "upsell_rate": 25.925925925925924
+      },
+      "Julia Rodriguez": {
+        "count": 55,
+        "total_revenue": 1225000.0,
+        "avg_deal_size": 22272.727272727272,
+        "cash_collection_rate": 89.41013877551023,
+        "upsell_rate": 25.454545454545453
+      },
+      "Marcus Thompson": {
+        "count": 59,
+        "total_revenue": 1340000.0,
+        "avg_deal_size": 22711.86440677966,
+        "cash_collection_rate": 89.87303134328357,
+        "upsell_rate": 23.728813559322035
+      }
+    },
+    "by_country": {
+      "US": {
+        "count": 116,
+        "total_revenue": 2625000.0,
+        "avg_deal_size": 22629.310344827587,
+        "revenue_share": 59.93150684931506
+      },
+      "EU": {
+        "count": 40,
+        "total_revenue": 865000.0,
+        "avg_deal_size": 21625.0,
+        "revenue_share": 19.748858447488583
+      },
+      "UK": {
+        "count": 39,
+        "total_revenue": 890000.0,
+        "avg_deal_size": 22820.51282051282,
+        "revenue_share": 20.319634703196346
+      }
+    }
+  },
+  "revenue_trends": {
+    "monthly_data": [
+      {
+        "year_month": "2025-01",
+        "revenue_sum": 280000.0,
+        "revenue_mean": 31111.11,
+        "revenue_count": 9,
+        "cash_collected_sum": 252461.83,
+        "upsell_sum": 0
+      },
+      {
+        "year_month": "2025-02",
+        "revenue_sum": 285000.0,
+        "revenue_mean": 23750.0,
+        "revenue_count": 12,
+        "cash_collected_sum": 254705.75,
+        "upsell_sum": 3
+      },
+      {
+        "year_month": "2025-03",
+        "revenue_sum": 150000.0,
+        "revenue_mean": 18750.0,
+        "revenue_count": 8,
+        "cash_collected_sum": 134918.86,
+        "upsell_sum": 3
+      },
+      {
+        "year_month": "2025-04",
+        "revenue_sum": 370000.0,
+        "revenue_mean": 23125.0,
+        "revenue_count": 16,
+        "cash_collected_sum": 328798.73,
+        "upsell_sum": 3
+      },
+      {
+        "year_month": "2025-05",
+        "revenue_sum": 215000.0,
+        "revenue_mean": 21500.0,
+        "revenue_count": 10,
+        "cash_collected_sum": 191066.74,
+        "upsell_sum": 4
+      },
+      {
+        "year_month": "2025-06",
+        "revenue_sum": 435000.0,
+        "revenue_mean": 19772.73,
+        "revenue_count": 22,
+        "cash_collected_sum": 390374.82,
+        "upsell_sum": 7
+      },
+      {
+        "year_month": "2025-07",
+        "revenue_sum": 370000.0,
+        "revenue_mean": 23125.0,
+        "revenue_count": 16,
+        "cash_collected_sum": 331476.55,
+        "upsell_sum": 4
+      },
+      {
+        "year_month": "2025-08",
+        "revenue_sum": 385000.0,
+        "revenue_mean": 22647.06,
+        "revenue_count": 17,
+        "cash_collected_sum": 345363.4,
+        "upsell_sum": 4
+      },
+      {
+        "year_month": "2025-09",
+        "revenue_sum": 490000.0,
+        "revenue_mean": 23333.33,
+        "revenue_count": 21,
+        "cash_collected_sum": 439685.13,
+        "upsell_sum": 5
+      },
+      {
+        "year_month": "2025-10",
+        "revenue_sum": 675000.0,
+        "revenue_mean": 21093.75,
+        "revenue_count": 32,
+        "cash_collected_sum": 611138.66,
+        "upsell_sum": 7
+      },
+      {
+        "year_month": "2025-11",
+        "revenue_sum": 725000.0,
+        "revenue_mean": 22656.25,
+        "revenue_count": 32,
+        "cash_collected_sum": 655161.29,
+        "upsell_sum": 9
+      }
+    ],
+    "growth_metrics": {
+      "average_mom_growth": 22.306441144257924,
+      "total_growth": 158.92857142857144,
+      "best_month": "2025-11",
+      "best_month_revenue": 725000.0,
+      "worst_month": "2025-03",
+      "worst_month_revenue": 150000.0
+    }
+  },
+  "product_performance": {
+    "Scale to 7-Figures Program": {
+      "count": 21,
+      "total_revenue": 1050000.0,
+      "avg_revenue": 50000.0,
+      "median_revenue": 50000.0,
+      "std_revenue": 0.0,
+      "min_revenue": 50000.0,
+      "max_revenue": 50000.0,
+      "revenue_share": 23.972602739726025,
+      "cash_collection_rate": 89.3558238095238,
+      "upsell_rate": 33.33333333333333,
+      "monthly_trend": {
+        "2025-01": 150000.0,
+        "2025-02": 50000.0,
+        "2025-04": 100000.0,
+        "2025-05": 50000.0,
+        "2025-06": 50000.0,
+        "2025-07": 100000.0,
+        "2025-08": 100000.0,
+        "2025-09": 150000.0,
+        "2025-10": 150000.0,
+        "2025-11": 150000.0
+      }
+    },
+    "Executive Leadership Mastery": {
+      "count": 72,
+      "total_revenue": 1800000.0,
+      "avg_revenue": 25000.0,
+      "median_revenue": 25000.0,
+      "std_revenue": 0.0,
+      "min_revenue": 25000.0,
+      "max_revenue": 25000.0,
+      "revenue_share": 41.0958904109589,
+      "cash_collection_rate": 89.90638333333334,
+      "upsell_rate": 29.166666666666668,
+      "monthly_trend": {
+        "2025-01": 100000.0,
+        "2025-02": 175000.0,
+        "2025-03": 75000.0,
+        "2025-04": 150000.0,
+        "2025-05": 75000.0,
+        "2025-06": 175000.0,
+        "2025-07": 150000.0,
+        "2025-08": 150000.0,
+        "2025-09": 175000.0,
+        "2025-10": 225000.0,
+        "2025-11": 350000.0
+      }
+    },
+    "Elite Business Accelerator": {
+      "count": 102,
+      "total_revenue": 1530000.0,
+      "avg_revenue": 15000.0,
+      "median_revenue": 15000.0,
+      "std_revenue": 0.0,
+      "min_revenue": 15000.0,
+      "max_revenue": 15000.0,
+      "revenue_share": 34.93150684931507,
+      "cash_collection_rate": 90.10462156862745,
+      "upsell_rate": 20.588235294117645,
+      "monthly_trend": {
+        "2025-01": 30000.0,
+        "2025-02": 60000.0,
+        "2025-03": 75000.0,
+        "2025-04": 120000.0,
+        "2025-05": 90000.0,
+        "2025-06": 210000.0,
+        "2025-07": 120000.0,
+        "2025-08": 135000.0,
+        "2025-09": 165000.0,
+        "2025-10": 300000.0,
+        "2025-11": 225000.0
+      }
+    }
+  },
+  "closer_performance": {
+    "Sarah Mitchell": {
+      "count": 81,
+      "total_revenue": 1815000.0,
+      "avg_deal_size": 22407.40740740741,
+      "median_deal_size": 15000.0,
+      "std_deal_size": 10341.39470499238,
+      "cash_collection_rate": 90.11454214876032,
+      "upsell_rate": 25.925925925925924,
+      "product_mix": {
+        "Elite Business Accelerator": 41,
+        "Executive Leadership Mastery": 32,
+        "Scale to 7-Figures Program": 8
+      },
+      "country_mix": {
+        "US": 46,
+        "EU": 21,
+        "UK": 14
+      }
+    },
+    "Julia Rodriguez": {
+      "count": 55,
+      "total_revenue": 1225000.0,
+      "avg_deal_size": 22272.727272727272,
+      "median_deal_size": 15000.0,
+      "std_deal_size": 10836.246694508318,
+      "cash_collection_rate": 89.41013877551023,
+      "upsell_rate": 25.454545454545453,
+      "product_mix": {
+        "Elite Business Accelerator": 30,
+        "Executive Leadership Mastery": 19,
+        "Scale to 7-Figures Program": 6
+      },
+      "country_mix": {
+        "US": 33,
+        "UK": 12,
+        "EU": 10
+      }
+    },
+    "Marcus Thompson": {
+      "count": 59,
+      "total_revenue": 1340000.0,
+      "avg_deal_size": 22711.86440677966,
+      "median_deal_size": 15000.0,
+      "std_deal_size": 11115.461191445853,
+      "cash_collection_rate": 89.87303134328357,
+      "upsell_rate": 23.728813559322035,
+      "product_mix": {
+        "Elite Business Accelerator": 31,
+        "Executive Leadership Mastery": 21,
+        "Scale to 7-Figures Program": 7
+      },
+      "country_mix": {
+        "US": 37,
+        "UK": 13,
+        "EU": 9
+      }
+    },
+    "statistical_test": {
+      "test": "One-way ANOVA",
+      "f_statistic": 0.025651545295334314,
+      "p_value": 0.9746780001248434,
+      "significant": "False",
+      "interpretation": "No significant differences between closers"
+    }
+  },
+  "geographic_performance": {
+    "US": {
+      "count": 116,
+      "total_revenue": 2625000.0,
+      "revenue_share": 59.93150684931506,
+      "avg_deal_size": 22629.310344827587,
+      "cash_collection_rate": 90.14070780952379,
+      "upsell_rate": 24.137931034482758,
+      "product_mix": {
+        "Elite Business Accelerator": 65,
+        "Executive Leadership Mastery": 36,
+        "Scale to 7-Figures Program": 15
+      },
+      "top_closer": "Sarah Mitchell"
+    },
+    "EU": {
+      "count": 40,
+      "total_revenue": 865000.0,
+      "revenue_share": 19.748858447488583,
+      "avg_deal_size": 21625.0,
+      "cash_collection_rate": 89.45678497109826,
+      "upsell_rate": 15.0,
+      "product_mix": {
+        "Elite Business Accelerator": 21,
+        "Executive Leadership Mastery": 16,
+        "Scale to 7-Figures Program": 3
+      },
+      "top_closer": "Sarah Mitchell"
+    },
+    "UK": {
+      "count": 39,
+      "total_revenue": 890000.0,
+      "revenue_share": 20.319634703196346,
+      "avg_deal_size": 22820.51282051282,
+      "cash_collection_rate": 89.3434820224719,
+      "upsell_rate": 38.46153846153847,
+      "product_mix": {
+        "Executive Leadership Mastery": 20,
+        "Elite Business Accelerator": 16,
+        "Scale to 7-Figures Program": 3
+      },
+      "top_closer": "Marcus Thompson"
+    }
+  },
+  "correlations": {
+    "matrix": {
+      "revenue": {
+        "revenue": 1.0,
+        "cash_collected": 0.9974136032508053,
+        "cash_collection_rate": -0.07972130761715598,
+        "upsell_numeric": 0.09933895438748791
+      },
+      "cash_collected": {
+        "revenue": 0.9974136032508053,
+        "cash_collected": 1.0,
+        "cash_collection_rate": -0.01508131007405165,
+        "upsell_numeric": 0.09257837046377723
+      },
+      "cash_collection_rate": {
+        "revenue": -0.07972130761715598,
+        "cash_collected": -0.01508131007405165,
+        "cash_collection_rate": 1.0,
+        "upsell_numeric": -0.06633447856489848
+      },
+      "upsell_numeric": {
+        "revenue": 0.09933895438748791,
+        "cash_collected": 0.09257837046377723,
+        "cash_collection_rate": -0.06633447856489848,
+        "upsell_numeric": 1.0
+      }
+    },
+    "strong_correlations": [
+      {
+        "var1": "revenue",
+        "var2": "cash_collected",
+        "correlation": 0.9974136032508053
+      }
+    ]
+  },
+  "cohort_analysis": {
+    "2025-01": {
+      "month": "2025-01",
+      "customer_count": 9,
+      "total_revenue": 280000.0,
+      "avg_deal_size": 31111.11111111111,
+      "cash_collection_rate": 90.1649392857143,
+      "upsell_rate": 0.0,
+      "product_mix": {
+        "Executive Leadership Mastery": 4,
+        "Scale to 7-Figures Program": 3,
+        "Elite Business Accelerator": 2
+      },
+      "top_product": "Scale to 7-Figures Program",
+      "top_closer": "Sarah Mitchell"
+    },
+    "2025-02": {
+      "month": "2025-02",
+      "customer_count": 12,
+      "total_revenue": 285000.0,
+      "avg_deal_size": 23750.0,
+      "cash_collection_rate": 89.37043859649123,
+      "upsell_rate": 25.0,
+      "product_mix": {
+        "Executive Leadership Mastery": 7,
+        "Elite Business Accelerator": 4,
+        "Scale to 7-Figures Program": 1
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Marcus Thompson"
+    },
+    "2025-03": {
+      "month": "2025-03",
+      "customer_count": 8,
+      "total_revenue": 150000.0,
+      "avg_deal_size": 18750.0,
+      "cash_collection_rate": 89.94590666666666,
+      "upsell_rate": 37.5,
+      "product_mix": {
+        "Elite Business Accelerator": 5,
+        "Executive Leadership Mastery": 3
+      },
+      "top_product": "Elite Business Accelerator",
+      "top_closer": "Marcus Thompson"
+    },
+    "2025-04": {
+      "month": "2025-04",
+      "customer_count": 16,
+      "total_revenue": 370000.0,
+      "avg_deal_size": 23125.0,
+      "cash_collection_rate": 88.86452162162162,
+      "upsell_rate": 18.75,
+      "product_mix": {
+        "Elite Business Accelerator": 8,
+        "Executive Leadership Mastery": 6,
+        "Scale to 7-Figures Program": 2
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Sarah Mitchell"
+    },
+    "2025-05": {
+      "month": "2025-05",
+      "customer_count": 10,
+      "total_revenue": 215000.0,
+      "avg_deal_size": 21500.0,
+      "cash_collection_rate": 88.86825116279068,
+      "upsell_rate": 40.0,
+      "product_mix": {
+        "Elite Business Accelerator": 6,
+        "Executive Leadership Mastery": 3,
+        "Scale to 7-Figures Program": 1
+      },
+      "top_product": "Elite Business Accelerator",
+      "top_closer": "Sarah Mitchell"
+    },
+    "2025-06": {
+      "month": "2025-06",
+      "customer_count": 22,
+      "total_revenue": 435000.0,
+      "avg_deal_size": 19772.727272727272,
+      "cash_collection_rate": 89.74133793103447,
+      "upsell_rate": 31.818181818181817,
+      "product_mix": {
+        "Elite Business Accelerator": 14,
+        "Executive Leadership Mastery": 7,
+        "Scale to 7-Figures Program": 1
+      },
+      "top_product": "Elite Business Accelerator",
+      "top_closer": "Marcus Thompson"
+    },
+    "2025-07": {
+      "month": "2025-07",
+      "customer_count": 16,
+      "total_revenue": 370000.0,
+      "avg_deal_size": 23125.0,
+      "cash_collection_rate": 89.58825675675676,
+      "upsell_rate": 25.0,
+      "product_mix": {
+        "Elite Business Accelerator": 8,
+        "Executive Leadership Mastery": 6,
+        "Scale to 7-Figures Program": 2
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Julia Rodriguez"
+    },
+    "2025-08": {
+      "month": "2025-08",
+      "customer_count": 17,
+      "total_revenue": 385000.0,
+      "avg_deal_size": 22647.058823529413,
+      "cash_collection_rate": 89.7047792207792,
+      "upsell_rate": 23.52941176470588,
+      "product_mix": {
+        "Elite Business Accelerator": 9,
+        "Executive Leadership Mastery": 6,
+        "Scale to 7-Figures Program": 2
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Sarah Mitchell"
+    },
+    "2025-09": {
+      "month": "2025-09",
+      "customer_count": 21,
+      "total_revenue": 490000.0,
+      "avg_deal_size": 23333.333333333332,
+      "cash_collection_rate": 89.73165918367349,
+      "upsell_rate": 23.809523809523807,
+      "product_mix": {
+        "Elite Business Accelerator": 11,
+        "Executive Leadership Mastery": 7,
+        "Scale to 7-Figures Program": 3
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Sarah Mitchell"
+    },
+    "2025-10": {
+      "month": "2025-10",
+      "customer_count": 32,
+      "total_revenue": 675000.0,
+      "avg_deal_size": 21093.75,
+      "cash_collection_rate": 90.53906074074075,
+      "upsell_rate": 21.875,
+      "product_mix": {
+        "Elite Business Accelerator": 20,
+        "Executive Leadership Mastery": 9,
+        "Scale to 7-Figures Program": 3
+      },
+      "top_product": "Elite Business Accelerator",
+      "top_closer": "Marcus Thompson"
+    },
+    "2025-11": {
+      "month": "2025-11",
+      "customer_count": 32,
+      "total_revenue": 725000.0,
+      "avg_deal_size": 22656.25,
+      "cash_collection_rate": 90.36707448275862,
+      "upsell_rate": 28.125,
+      "product_mix": {
+        "Elite Business Accelerator": 15,
+        "Executive Leadership Mastery": 14,
+        "Scale to 7-Figures Program": 3
+      },
+      "top_product": "Executive Leadership Mastery",
+      "top_closer": "Sarah Mitchell"
+    }
+  },
+  "outliers": {
+    "statistical_bounds": {
+      "Q1": 15000.0,
+      "Q3": 25000.0,
+      "IQR": 10000.0,
+      "lower_bound": 0.0,
+      "upper_bound": 40000.0
+    },
+    "outlier_count": 21,
+    "outlier_deals": [
+      {
+        "id": 1,
+        "sale_date": "2025-01-02 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 7,
+        "sale_date": "2025-01-19 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 9,
+        "sale_date": "2025-01-25 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 11,
+        "sale_date": "2025-02-04 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 32,
+        "sale_date": "2025-04-04 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 39,
+        "sale_date": "2025-04-22 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 46,
+        "sale_date": "2025-05-05 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 60,
+        "sale_date": "2025-06-06 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 79,
+        "sale_date": "2025-07-03 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 88,
+        "sale_date": "2025-07-16 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 96,
+        "sale_date": "2025-08-05 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 106,
+        "sale_date": "2025-08-26 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 114,
+        "sale_date": "2025-09-04 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 116,
+        "sale_date": "2025-09-08 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 124,
+        "sale_date": "2025-09-16 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 133,
+        "sale_date": "2025-10-03 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      },
+      {
+        "id": 139,
+        "sale_date": "2025-10-08 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 154,
+        "sale_date": "2025-10-17 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson"
+      },
+      {
+        "id": 171,
+        "sale_date": "2025-11-11 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 180,
+        "sale_date": "2025-11-18 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez"
+      },
+      {
+        "id": 186,
+        "sale_date": "2025-11-24 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell"
+      }
+    ],
+    "top_10_deals": [
+      {
+        "id": 1,
+        "sale_date": "2025-01-02 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 7,
+        "sale_date": "2025-01-19 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson",
+        "country": "UK",
+        "upsell": false
+      },
+      {
+        "id": 9,
+        "sale_date": "2025-01-25 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 11,
+        "sale_date": "2025-02-04 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson",
+        "country": "US",
+        "upsell": true
+      },
+      {
+        "id": 32,
+        "sale_date": "2025-04-04 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 39,
+        "sale_date": "2025-04-22 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 46,
+        "sale_date": "2025-05-05 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Sarah Mitchell",
+        "country": "US",
+        "upsell": true
+      },
+      {
+        "id": 60,
+        "sale_date": "2025-06-06 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Marcus Thompson",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 79,
+        "sale_date": "2025-07-03 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez",
+        "country": "US",
+        "upsell": false
+      },
+      {
+        "id": 88,
+        "sale_date": "2025-07-16 00:00:00",
+        "product": "Scale to 7-Figures Program",
+        "revenue": 50000.0,
+        "closer": "Julia Rodriguez",
+        "country": "US",
+        "upsell": true
+      }
+    ],
+    "closer_rankings": {
+      "Sarah Mitchell": {
+        "total_revenue": 1815000.0,
+        "avg_revenue": 22407.41,
+        "deal_count": 81
+      },
+      "Marcus Thompson": {
+        "total_revenue": 1340000.0,
+        "avg_revenue": 22711.86,
+        "deal_count": 59
+      },
+      "Julia Rodriguez": {
+        "total_revenue": 1225000.0,
+        "avg_revenue": 22272.73,
+        "deal_count": 55
+      }
+    },
+    "product_rankings": {
+      "Executive Leadership Mastery": {
+        "total_revenue": 1800000.0,
+        "avg_revenue": 25000.0,
+        "deal_count": 72
+      },
+      "Elite Business Accelerator": {
+        "total_revenue": 1530000.0,
+        "avg_revenue": 15000.0,
+        "deal_count": 102
+      },
+      "Scale to 7-Figures Program": {
+        "total_revenue": 1050000.0,
+        "avg_revenue": 50000.0,
+        "deal_count": 21
+      }
+    }
+  },
+  "insights": [
+    {
+      "category": "Data Quality",
+      "insight": "Dataset is clean with no duplicates or missing values",
+      "confidence": "High"
+    },
+    {
+      "category": "Upsells",
+      "insight": "Strong upsell performance at 25.1%",
+      "confidence": "High"
+    },
+    {
+      "category": "Revenue Growth",
+      "insight": "Positive month-over-month growth averaging 22.3%",
+      "confidence": "High"
+    },
+    {
+      "category": "Product Performance",
+      "insight": "Executive Leadership Mastery is the top revenue generator with $1,800,000 (41.1% of total)",
+      "confidence": "High"
+    },
+    {
+      "category": "Closer Performance",
+      "insight": "Sarah Mitchell is the top performer with $1,815,000 in revenue",
+      "confidence": "High"
+    }
+  ]
+}

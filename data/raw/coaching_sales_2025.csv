@@ -1,0 +1,196 @@
+date,name,email,revenue,cash_collected,product,closer,country,upsell
+2025-01-02,Allison Hill,donaldgarcia@example.net,50000,45608.62,Scale to 7-Figures Program,Sarah Mitchell,US,False
+2025-01-06,Angie Henderson,davisjesse@example.net,25000,22937.44,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-01-07,Cristian Santos,lrobinson@example.com,25000,22641.85,Executive Leadership Mastery,Marcus Thompson,EU,False
+2025-01-08,Abigail Shaffer,jpeterson@example.org,15000,13663.49,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-01-12,Gabrielle Davis,howardmaurice@example.com,15000,13736.75,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-01-13,Monica Herrera,smiller@example.net,25000,22983.68,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-01-19,Shannon Ray,williamsjeremy@example.com,50000,42644.77,Scale to 7-Figures Program,Marcus Thompson,UK,False
+2025-01-22,Dr. Sharon James,xreid@example.org,25000,21933.18,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-01-25,Daniel Adams,lynchgeorge@example.net,50000,46312.05,Scale to 7-Figures Program,Sarah Mitchell,US,False
+2025-02-03,Joel Nelson,gabriellecameron@example.org,15000,14132.31,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-02-04,Andrew Stewart,carl95@example.org,50000,44255.12,Scale to 7-Figures Program,Marcus Thompson,US,True
+2025-02-07,Jennifer Rocha,ithomas@example.org,15000,13022.11,Elite Business Accelerator,Marcus Thompson,US,False
+2025-02-07,Kimberly Burgess,zhurst@example.com,25000,21608.13,Executive Leadership Mastery,Marcus Thompson,EU,False
+2025-02-12,Zachary Hicks,camposmichelle@example.org,25000,22893.36,Executive Leadership Mastery,Marcus Thompson,EU,False
+2025-02-13,Rebecca Henderson,cruzcaitlin@example.com,15000,12854.38,Elite Business Accelerator,Julia Rodriguez,EU,False
+2025-02-19,Tricia Valencia,frazierdanny@example.net,25000,23102.42,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-02-19,Patricia Peterson,ryan70@example.net,15000,14207.72,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-02-21,Deborah Mason,williamrodriguez@example.net,25000,21479.39,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-02-23,Mark Lynch,nathanielmartin@example.net,25000,22576.21,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-02-24,Linda Burns,hickmannatasha@example.com,25000,22190.49,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-02-27,David Bradley,millertodd@example.org,25000,22384.11,Executive Leadership Mastery,Julia Rodriguez,UK,False
+2025-03-03,Kim Martinez,karroyo@example.com,15000,12986.11,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-03-04,Lisa Brandt,jenniferross@example.net,25000,22029.09,Executive Leadership Mastery,Sarah Mitchell,UK,True
+2025-03-09,Jessica Holmes,wrightcaleb@example.org,25000,22060.96,Executive Leadership Mastery,Julia Rodriguez,UK,True
+2025-03-13,Crystal Robinson,zimmermanbrian@example.org,15000,14162.11,Elite Business Accelerator,Marcus Thompson,US,False
+2025-03-14,Shannon Jones,joshuawashington@example.net,25000,22740.56,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-03-18,Timothy Duncan,esanchez@example.com,15000,14075.01,Elite Business Accelerator,Marcus Thompson,US,False
+2025-03-18,Brent Jordan,ujenkins@example.org,15000,12983.37,Elite Business Accelerator,Marcus Thompson,US,True
+2025-03-27,Victoria Garcia,zchandler@example.org,15000,13881.65,Elite Business Accelerator,Marcus Thompson,US,False
+2025-04-02,Connor West,dwhite@example.org,15000,12824.64,Elite Business Accelerator,Marcus Thompson,US,False
+2025-04-03,Angela Morton,williamsyvette@example.org,15000,12872.37,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-04-04,Tammy Allison,richardolson@example.com,50000,44715.56,Scale to 7-Figures Program,Sarah Mitchell,US,False
+2025-04-08,Carmen Smith,ybaker@example.com,15000,13386.02,Elite Business Accelerator,Sarah Mitchell,UK,False
+2025-04-08,Michael Cross,smoore@example.org,15000,13660.61,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-04-08,Lauren Daniels,brian97@example.net,15000,13371.28,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-04-09,Kim Brown,yorkcasey@example.org,25000,21788.92,Executive Leadership Mastery,Marcus Thompson,UK,True
+2025-04-17,Cynthia Wilson,bethwilliams@example.org,25000,22530.87,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-04-18,Kevin Mills,james53@example.com,25000,22112.93,Executive Leadership Mastery,Marcus Thompson,UK,False
+2025-04-22,Michael Evans,sarah10@example.com,50000,43054.45,Scale to 7-Figures Program,Julia Rodriguez,US,False
+2025-04-23,Kristine Garcia,williamanderson@example.com,25000,22945.54,Executive Leadership Mastery,Marcus Thompson,UK,True
+2025-04-24,Sherry Wood,samueldaniels@example.com,15000,13639.7,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-04-28,Victoria Valdez,contrerasangela@example.net,25000,22567.34,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-04-28,Shawn Baker,newtoneric@example.com,25000,22021.05,Executive Leadership Mastery,Marcus Thompson,UK,False
+2025-04-28,Michelle Harris,william40@example.org,15000,13080.78,Elite Business Accelerator,Sarah Mitchell,UK,False
+2025-04-28,Sandra Williams,kellie42@example.net,15000,14226.67,Elite Business Accelerator,Julia Rodriguez,UK,False
+2025-05-05,Michael Hoffman,jonesnicole@example.org,50000,42773.91,Scale to 7-Figures Program,Sarah Mitchell,US,True
+2025-05-06,Sandra Aguilar,russellwilliams@example.com,15000,13056.63,Elite Business Accelerator,Julia Rodriguez,UK,True
+2025-05-12,Rebecca Valencia,jason31@example.com,15000,14167.99,Elite Business Accelerator,Marcus Thompson,UK,True
+2025-05-14,Stacey Russell,sarayoung@example.org,25000,23168.37,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-05-20,Rita Keith,whitesandra@example.com,25000,23160.4,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-05-20,Sharon Cochran,erik16@example.org,25000,21973.62,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-05-21,Courtney Velasquez,ybailey@example.org,15000,12929.98,Elite Business Accelerator,Marcus Thompson,EU,True
+2025-05-26,Matthew Ross,michelle45@example.net,15000,13496.08,Elite Business Accelerator,Marcus Thompson,US,False
+2025-05-27,Meghan Anthony,sheila14@example.org,15000,13395.98,Elite Business Accelerator,Marcus Thompson,US,False
+2025-05-27,Victoria Johnson,yreed@example.com,15000,12943.78,Elite Business Accelerator,Marcus Thompson,US,False
+2025-06-02,William Wilson,jonathanfletcher@example.org,15000,13548.87,Elite Business Accelerator,Marcus Thompson,US,False
+2025-06-03,Renee Mcdaniel,michaeljones@example.net,15000,13095.17,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-06-04,Lisa Alvarado,cortezkevin@example.com,15000,13588.09,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-06-06,Erika Terry,jamesortega@example.com,25000,22920.12,Executive Leadership Mastery,Marcus Thompson,UK,False
+2025-06-06,Stephanie Gilbert,richard04@example.com,50000,44270.84,Scale to 7-Figures Program,Marcus Thompson,US,False
+2025-06-09,Richard Lawson,steven73@example.net,25000,22242.68,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-06-11,Steven Flynn,donnacampbell@example.net,25000,23105.1,Executive Leadership Mastery,Sarah Mitchell,UK,True
+2025-06-11,Frances Cardenas,emilywalker@example.org,15000,13404.33,Elite Business Accelerator,Julia Rodriguez,EU,False
+2025-06-14,Angel Riggs,gibsonolivia@example.net,15000,13439.63,Elite Business Accelerator,Julia Rodriguez,UK,True
+2025-06-14,Michael Snyder,dylanwatts@example.org,15000,12866.79,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-06-16,Colleen Brock,pwilliams@example.org,25000,22032.65,Executive Leadership Mastery,Julia Rodriguez,UK,False
+2025-06-16,Robert Contreras,stephanie79@example.net,15000,13393.93,Elite Business Accelerator,Sarah Mitchell,EU,True
+2025-06-16,Jessica Meadows,vmerritt@example.com,15000,13356.63,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-06-17,Paul Larsen,katie87@example.net,25000,22850.35,Executive Leadership Mastery,Marcus Thompson,UK,False
+2025-06-17,Jeremiah Reeves,josephflores@example.net,15000,13184.27,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-06-18,Chris Reyes,jasminebrown@example.com,15000,13357.55,Elite Business Accelerator,Marcus Thompson,US,False
+2025-06-18,John Brown,xprice@example.net,15000,14199.3,Elite Business Accelerator,Marcus Thompson,US,False
+2025-06-19,Alicia Gilmore,wwoods@example.com,15000,13007.81,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-06-24,Sarah Ashley,vmedina@example.net,15000,14171.42,Elite Business Accelerator,Marcus Thompson,EU,False
+2025-06-25,Stephanie Freeman,ryan06@example.com,25000,22400.24,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-06-25,Rebecca Ramsey,ncalhoun@example.net,15000,13784.42,Elite Business Accelerator,Sarah Mitchell,EU,True
+2025-06-25,James Elliott,millerroy@example.com,25000,22154.63,Executive Leadership Mastery,Julia Rodriguez,UK,True
+2025-07-01,David Murphy,wmurphy@example.com,15000,13405.07,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-07-03,Trevor Fisher,ruizkaitlyn@example.org,50000,43029.32,Scale to 7-Figures Program,Julia Rodriguez,US,False
+2025-07-03,Mrs. Marie Harrington DDS,herringjames@example.org,25000,22339.19,Executive Leadership Mastery,Julia Rodriguez,EU,False
+2025-07-04,Cynthia Wells,elliottjeffery@example.net,15000,13350.67,Elite Business Accelerator,Julia Rodriguez,EU,False
+2025-07-04,Jacob Obrien,stricklandfrank@example.com,15000,12867.97,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-07-08,Alexander Collins,tsanders@example.org,15000,14055.79,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-07-09,Michael Burton,terrykevin@example.net,15000,13868.71,Elite Business Accelerator,Julia Rodriguez,US,True
+2025-07-09,Barbara Riggs,reedross@example.com,25000,21803.93,Executive Leadership Mastery,Marcus Thompson,UK,True
+2025-07-13,Matthew Smith,gshort@example.com,15000,13918.68,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-07-14,Madison Poole,ryangross@example.net,25000,21440.95,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-07-16,Robert Medina,umarshall@example.net,50000,45666.12,Scale to 7-Figures Program,Julia Rodriguez,US,True
+2025-07-17,Samuel Rivas,ramirezshannon@example.com,25000,22576.51,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-07-22,Mary Rogers,lrosales@example.com,15000,13040.86,Elite Business Accelerator,Julia Rodriguez,UK,False
+2025-07-22,Robert Peterson,angela83@example.org,25000,23190.57,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-07-23,Jason Peters,hannahbrewer@example.com,15000,13276.65,Elite Business Accelerator,Marcus Thompson,EU,False
+2025-07-28,Alan Phillips,tholt@example.net,25000,23645.56,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-08-01,Kara Schmidt,jbarajas@example.com,25000,22863.61,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-08-03,Jesse Parker,davidlee@example.org,25000,21619.22,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-08-05,Tiffany Vaughn,javierwashington@example.net,50000,43014.02,Scale to 7-Figures Program,Julia Rodriguez,US,True
+2025-08-06,Paige Carlson,wallkenneth@example.com,25000,21889.92,Executive Leadership Mastery,Sarah Mitchell,UK,False
+2025-08-07,Adrian Ferguson,brandon08@example.com,15000,13010.25,Elite Business Accelerator,Sarah Mitchell,UK,False
+2025-08-08,Beth Oneill,agarcia@example.net,15000,12979.3,Elite Business Accelerator,Julia Rodriguez,US,True
+2025-08-14,John Peterson,kingmichelle@example.org,15000,13888.73,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-08-19,Jennifer Jones,hernandezlisa@example.com,25000,21438.38,Executive Leadership Mastery,Julia Rodriguez,EU,False
+2025-08-20,David Grant,yobrien@example.net,15000,14176.94,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-08-20,Joseph Hayes,levans@example.com,15000,13691.92,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-08-25,Marc Lynch,mezajared@example.org,15000,13445.93,Elite Business Accelerator,Julia Rodriguez,UK,False
+2025-08-25,Brad Allen,moorericky@example.net,15000,13595.6,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-08-26,Doris Hall,jacqueline71@example.net,50000,45397.34,Scale to 7-Figures Program,Sarah Mitchell,EU,False
+2025-08-26,Dennis Moody,ronaldstephens@example.net,25000,22952.83,Executive Leadership Mastery,Julia Rodriguez,US,True
+2025-08-26,Derek Thomas,martinkyle@example.net,25000,23455.12,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-08-26,Tammy Gonzales,sbarker@example.com,15000,13714.49,Elite Business Accelerator,Marcus Thompson,UK,True
+2025-08-27,Kathryn Snyder,georgepamela@example.net,15000,14229.8,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-09-03,David Davis,keyemily@example.com,15000,13234.81,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-09-04,Pamela Thompson,lmoon@example.net,15000,14206.46,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-09-04,Robert Costa,vbailey@example.com,15000,13224.21,Elite Business Accelerator,Marcus Thompson,US,False
+2025-09-04,Shannon Rivera,zroberts@example.net,50000,44698.81,Scale to 7-Figures Program,Marcus Thompson,US,True
+2025-09-05,Brandon King,cordovarichard@example.net,15000,13453.38,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-09-08,April Booth,mgutierrez@example.net,50000,45656.93,Scale to 7-Figures Program,Marcus Thompson,US,False
+2025-09-10,Peter Garrett,harrisandrea@example.com,15000,13944.49,Elite Business Accelerator,Julia Rodriguez,US,True
+2025-09-11,Michael Martinez,jennifercollins@example.org,15000,13637.13,Elite Business Accelerator,Marcus Thompson,US,False
+2025-09-11,Anna Gay,murraydavid@example.org,15000,13277.91,Elite Business Accelerator,Marcus Thompson,US,False
+2025-09-11,Dr. Jordan Hill PhD,jsanchez@example.org,25000,21435.48,Executive Leadership Mastery,Marcus Thompson,US,True
+2025-09-11,Thomas Romero,michellehill@example.com,25000,22404.36,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-09-16,Richard Adams,campbellkenneth@example.net,15000,12806.41,Elite Business Accelerator,Marcus Thompson,UK,False
+2025-09-16,Mary Grimes,wryan@example.com,25000,22171.84,Executive Leadership Mastery,Sarah Mitchell,UK,False
+2025-09-16,Kimberly Gibson,molly39@example.com,50000,43935.39,Scale to 7-Figures Program,Sarah Mitchell,EU,False
+2025-09-17,Reginald Williams,zthornton@example.com,15000,13717.0,Elite Business Accelerator,Sarah Mitchell,UK,False
+2025-09-17,Matthew Hoover,tylerjohnson@example.net,15000,14216.05,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-09-21,Evelyn Garcia,dgarcia@example.org,25000,21475.74,Executive Leadership Mastery,Julia Rodriguez,UK,False
+2025-09-23,Jennifer Pena,charlesharrington@example.com,15000,13641.12,Elite Business Accelerator,Marcus Thompson,US,True
+2025-09-24,Michael Santos,melissa86@example.com,25000,22211.21,Executive Leadership Mastery,Sarah Mitchell,EU,True
+2025-09-26,Stacy Freeman,williamsonjimmy@example.net,25000,22700.82,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-09-26,Yolanda Francis,wgood@example.net,25000,23635.58,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-10-03,Ashlee Jackson,rebecca05@example.org,15000,13858.38,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-10-03,James Thomas,yknight@example.org,50000,42705.11,Scale to 7-Figures Program,Sarah Mitchell,UK,True
+2025-10-03,Bob Pitts,tyleraguilar@example.org,15000,14113.57,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-10-06,David Scott,nolansteven@example.com,25000,22679.14,Executive Leadership Mastery,Sarah Mitchell,EU,False
+2025-10-07,Brooke Alexander,vanessa46@example.net,15000,13032.36,Elite Business Accelerator,Marcus Thompson,US,False
+2025-10-08,Ryan Gonzalez,gcastaneda@example.org,25000,22762.51,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-10-08,Ian Phillips,andrew64@example.org,15000,13502.05,Elite Business Accelerator,Marcus Thompson,US,False
+2025-10-08,Melissa Garner,lozanojulie@example.com,50000,47288.61,Scale to 7-Figures Program,Marcus Thompson,UK,False
+2025-10-09,Crystal Pham,danaoliver@example.net,15000,13425.78,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-10-09,Patricia Becker,courtneyberger@example.net,25000,23277.42,Executive Leadership Mastery,Sarah Mitchell,UK,True
+2025-10-09,Richard Johnson,jessica14@example.com,25000,23343.44,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-10-10,Casey Anderson,alyssa42@example.com,15000,14223.58,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-10-13,Terry Coffey,julie51@example.com,15000,12876.49,Elite Business Accelerator,Marcus Thompson,US,False
+2025-10-13,Brenda Levy,zcoffey@example.net,15000,13719.19,Elite Business Accelerator,Marcus Thompson,US,True
+2025-10-13,Richard Smith,gibsonemily@example.net,25000,21347.86,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-10-13,James Little,daniel37@example.org,15000,13811.43,Elite Business Accelerator,Sarah Mitchell,UK,False
+2025-10-15,Terri Murphy,deborahreid@example.com,15000,14236.48,Elite Business Accelerator,Marcus Thompson,US,False
+2025-10-15,Elizabeth Ortiz,brandonjohnson@example.com,25000,22560.17,Executive Leadership Mastery,Marcus Thompson,UK,False
+2025-10-15,David Medina,qchavez@example.net,15000,13664.71,Elite Business Accelerator,Marcus Thompson,EU,False
+2025-10-16,Kimberly Matthews,nicolepena@example.com,15000,13295.85,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-10-16,Teresa Ramirez,jeff73@example.com,15000,14126.91,Elite Business Accelerator,Marcus Thompson,EU,False
+2025-10-16,Michael Stephens,bruce43@example.org,15000,13331.12,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-10-17,Samantha Davis,darleneharper@example.org,50000,46372.32,Scale to 7-Figures Program,Marcus Thompson,EU,True
+2025-10-20,Gavin Zhang,caseyhubbard@example.org,15000,13768.35,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-10-20,Robin Hall,kristinacarlson@example.com,15000,12828.55,Elite Business Accelerator,Julia Rodriguez,EU,False
+2025-10-21,Brianna Anderson,lauren10@example.org,15000,13696.33,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-10-22,Richard Young,alfred40@example.org,25000,22086.62,Executive Leadership Mastery,Sarah Mitchell,UK,False
+2025-10-22,Kelly Reese,xwest@example.net,25000,22074.23,Executive Leadership Mastery,Julia Rodriguez,US,True
+2025-10-23,Jodi Walker,acostaregina@example.net,25000,22644.91,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-10-25,Judith Maynard,lutzmelanie@example.com,15000,13329.85,Elite Business Accelerator,Marcus Thompson,US,False
+2025-10-28,Katherine Browning,lammarc@example.org,15000,13127.99,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-10-28,Donald Schultz,oscar98@example.com,15000,14027.35,Elite Business Accelerator,Julia Rodriguez,UK,True
+2025-11-03,Larry Garcia,farrelldebra@example.net,15000,14196.62,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-11-03,Cindy Hayes,robertwilcox@example.com,15000,13654.05,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-11-05,Brandon Simmons,nicholas27@example.org,15000,12975.56,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-11-06,Bradley Reynolds,lisa80@example.net,15000,12872.25,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-11-06,Kristina Santiago,qgomez@example.com,25000,22909.03,Executive Leadership Mastery,Sarah Mitchell,UK,False
+2025-11-08,Michelle Schmitt,michael98@example.org,25000,23541.87,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-11-10,John Boone,megan51@example.com,25000,22025.58,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-11-11,Renee Bruce,lynchdiane@example.net,50000,45780.27,Scale to 7-Figures Program,Julia Rodriguez,US,False
+2025-11-11,Christopher Park,sandra50@example.org,15000,13743.2,Elite Business Accelerator,Sarah Mitchell,EU,False
+2025-11-12,Kylie Morales,joycebonilla@example.org,15000,12943.43,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-11-12,Cindy Barnes,eric45@example.net,15000,13813.25,Elite Business Accelerator,Julia Rodriguez,UK,False
+2025-11-13,Sophia Moore,craigjoseph@example.net,15000,12877.08,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-11-14,Lawrence Perry,kariwilson@example.com,15000,13588.38,Elite Business Accelerator,Julia Rodriguez,EU,False
+2025-11-17,Michael Watkins,brandon69@example.org,25000,22858.73,Executive Leadership Mastery,Julia Rodriguez,EU,False
+2025-11-18,Eric Clark,kathrynroberts@example.org,15000,13242.71,Elite Business Accelerator,Marcus Thompson,US,False
+2025-11-18,Paul Thompson,opatel@example.net,25000,21569.48,Executive Leadership Mastery,Julia Rodriguez,EU,True
+2025-11-18,Mary Gomez,chensley@example.com,50000,46014.15,Scale to 7-Figures Program,Julia Rodriguez,US,False
+2025-11-18,Thomas Atkins,tberry@example.net,25000,23617.77,Executive Leadership Mastery,Julia Rodriguez,US,False
+2025-11-20,Brian Smith,george97@example.net,25000,23742.91,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-11-21,Anita Richard,ryanmorales@example.org,15000,14118.67,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-11-22,Eric Morgan,kimberly18@example.net,15000,12890.18,Elite Business Accelerator,Sarah Mitchell,US,True
+2025-11-22,Jordan Bullock,michael23@example.org,25000,22926.14,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-11-24,Craig Morrison,thompsonkendra@example.com,50000,45042.44,Scale to 7-Figures Program,Sarah Mitchell,US,False
+2025-11-25,Justin Riley,michelle52@example.com,25000,21295.58,Executive Leadership Mastery,Julia Rodriguez,EU,False
+2025-11-25,Jeremy Turner,brittany58@example.org,15000,13213.3,Elite Business Accelerator,Julia Rodriguez,US,False
+2025-11-25,Jesse Brown,chase19@example.net,25000,23627.92,Executive Leadership Mastery,Marcus Thompson,US,True
+2025-11-26,Julie Spencer,colelisa@example.net,25000,22104.33,Executive Leadership Mastery,Sarah Mitchell,US,True
+2025-11-26,Larry Mason,hayeslisa@example.com,25000,23165.39,Executive Leadership Mastery,Sarah Mitchell,US,False
+2025-11-27,Mrs. Maria Williams,hritter@example.net,25000,21730.01,Executive Leadership Mastery,Marcus Thompson,US,False
+2025-11-27,Helen Hardin,vortiz@example.net,15000,14249.96,Elite Business Accelerator,Sarah Mitchell,US,False
+2025-11-28,Rachel Holland,riveraangela@example.com,25000,21637.36,Executive Leadership Mastery,Julia Rodriguez,US,True
+2025-11-28,Nathaniel Douglas,mathewaguilar@example.org,15000,13193.69,Elite Business Accelerator,Sarah Mitchell,UK,True

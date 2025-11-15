@@ -1,0 +1,2 @@
+total_deals,unique_customers,total_revenue,total_cash_collected,avg_deal_size,overall_collection_rate,total_outstanding,fully_paid_deals,total_upsells,upsell_rate,active_closers,products_sold,countries_served,first_sale_date,latest_sale_date,days_of_operation,revenue_per_closer,revenue_per_day,deals_per_closer
+195,195,4380000.0,3935151.76,22461.54,89.84,444848.24,0,49,25.13,3,3,3,2025-01-02,2025-11-28,330,1460000.0,13232.63,65.0
