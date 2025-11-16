@@ -2,9 +2,15 @@
 FastAPI application for Business Coaching Analytics.
 
 This API provides endpoints for accessing sales data, metrics, and AI-powered insights.
+Includes API key authentication, CORS, and rate limiting for security.
 """
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Security, Depends, Request
 from fastapi.responses import StreamingResponse, JSONResponse
+from fastapi.security import APIKeyHeader
+from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from typing import Optional, List
 from datetime import date
 import io
@@ -12,11 +18,18 @@ import csv
 import json
 import math
 import sys
+import logging
+import os
 from pathlib import Path
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 # Add parent directory to path to import config
 sys.path.append(str(Path(__file__).parent.parent))
 from src.config import API_CONFIG
+from src.db_utils import close_connection_pool
 
 from api.models import (
     SaleResponse,
@@ -39,6 +52,9 @@ from api.database import (
     get_time_series_metrics,
 )
 
+# Rate limiting setup
+limiter = Limiter(key_func=get_remote_address)
+
 # Initialize FastAPI app
 app = FastAPI(
     title=API_CONFIG["title"],
@@ -47,6 +63,64 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
 )
+
+# Add rate limiter to app state
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# CORS configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify exact origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# API Key Authentication
+API_KEY_NAME = "X-API-Key"
+api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
+
+# Load API keys from environment
+VALID_API_KEYS = os.getenv("API_KEYS", "dev_key_12345").split(",")
+
+async def verify_api_key(api_key: str = Security(api_key_header)):
+    """
+    Verify API key for protected endpoints.
+
+    For development: API key is optional (returns None if not provided)
+    For production: Set REQUIRE_API_KEY=true in .env to enforce
+    """
+    require_api_key = os.getenv("REQUIRE_API_KEY", "false").lower() == "true"
+
+    if not require_api_key and api_key is None:
+        logger.warning("API key not provided - running in development mode")
+        return None
+
+    if api_key not in VALID_API_KEYS:
+        logger.warning(f"Invalid API key attempt: {api_key[:10] if api_key else 'None'}...")
+        raise HTTPException(
+            status_code=403,
+            detail="Invalid or missing API key"
+        )
+
+    return api_key
+
+# Startup and shutdown events
+@app.on_event("startup")
+async def startup_event():
+    """Initialize resources on startup"""
+    logger.info("Starting Business Coaching Analytics API...")
+    logger.info(f"API Version: {API_CONFIG['version']}")
+    logger.info(f"Rate Limiting: Enabled")
+    logger.info(f"CORS: Enabled")
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    """Clean up resources on shutdown"""
+    logger.info("Shutting down API...")
+    close_connection_pool()
+    logger.info("Database connection pool closed")
 
 
 @app.get("/", tags=["Root"])
@@ -72,7 +146,9 @@ async def health_check():
 
 # Sales Endpoints
 @app.get("/api/sales", response_model=SalesListResponse, tags=["Sales"])
+@limiter.limit("100/minute")
 async def list_sales(
+    request: Request,
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(50, ge=1, le=200, description="Number of items per page"),
     start_date: Optional[date] = Query(None, description="Filter by start date (YYYY-MM-DD)"),
@@ -80,6 +156,7 @@ async def list_sales(
     product: Optional[str] = Query(None, description="Filter by product name"),
     closer: Optional[str] = Query(None, description="Filter by closer name"),
     country: Optional[str] = Query(None, description="Filter by country code (US, UK, EU)"),
+    api_key: str = Depends(verify_api_key),
 ):
     """
     Get list of all sales with pagination and filtering options.

@@ -12,11 +12,11 @@ Usage:
     python src/run_queries.py --list             # List all available queries
 """
 
-import psycopg2
 import pandas as pd
 import json
 import os
 import sys
+import logging
 from datetime import datetime
 from pathlib import Path
 import argparse
@@ -24,6 +24,12 @@ from typing import Dict, List, Any, Optional
 
 from config import DB_CONFIG
 import sql_queries
+# Import centralized database utilities
+from db_utils import get_db_connection
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 
 # ============================================================================
@@ -39,34 +45,6 @@ JSON_OUTPUT_DIR = QUERIES_OUTPUT_DIR / "json"
 # Create output directories
 for dir_path in [OUTPUTS_DIR, QUERIES_OUTPUT_DIR, CSV_OUTPUT_DIR, JSON_OUTPUT_DIR]:
     dir_path.mkdir(parents=True, exist_ok=True)
-
-
-# ============================================================================
-# DATABASE CONNECTION
-# ============================================================================
-
-def get_db_connection():
-    """
-    Create and return a database connection.
-
-    Returns:
-        psycopg2 connection object
-
-    Raises:
-        psycopg2.Error: If connection fails
-    """
-    try:
-        conn = psycopg2.connect(
-            host=DB_CONFIG["host"],
-            port=DB_CONFIG["port"],
-            user=DB_CONFIG["user"],
-            password=DB_CONFIG["password"],
-            database=DB_CONFIG["database"]
-        )
-        return conn
-    except psycopg2.Error as e:
-        print(f"✗ Error connecting to database: {e}")
-        sys.exit(1)
 
 
 # ============================================================================

@@ -1,9 +1,8 @@
 """
 Database connection and query utilities for the API.
+
+This module uses the centralized database utilities from src/db_utils.py.
 """
-import psycopg2
-from psycopg2.extras import RealDictCursor
-from contextlib import contextmanager
 from typing import List, Dict, Any, Optional
 from datetime import date
 import sys
@@ -11,20 +10,7 @@ from pathlib import Path
 
 # Add parent directory to path to import config
 sys.path.append(str(Path(__file__).parent.parent))
-from src.config import DB_CONFIG
-
-
-@contextmanager
-def get_db_connection():
-    """
-    Context manager for database connections.
-    Ensures proper connection cleanup.
-    """
-    conn = psycopg2.connect(**DB_CONFIG)
-    try:
-        yield conn
-    finally:
-        conn.close()
+from src.db_utils import get_db_connection, execute_query_dict
 
 
 def execute_query(query: str, params: tuple = None) -> List[Dict[str, Any]]:
@@ -38,10 +24,7 @@ def execute_query(query: str, params: tuple = None) -> List[Dict[str, Any]]:
     Returns:
         List of dictionaries representing rows
     """
-    with get_db_connection() as conn:
-        with conn.cursor(cursor_factory=RealDictCursor) as cursor:
-            cursor.execute(query, params)
-            return [dict(row) for row in cursor.fetchall()]
+    return execute_query_dict(query, params, fetch="all")
 
 
 def execute_single_query(query: str, params: tuple = None) -> Optional[Dict[str, Any]]:
@@ -55,11 +38,7 @@ def execute_single_query(query: str, params: tuple = None) -> Optional[Dict[str,
     Returns:
         Dictionary representing the row, or None if no results
     """
-    with get_db_connection() as conn:
-        with conn.cursor(cursor_factory=RealDictCursor) as cursor:
-            cursor.execute(query, params)
-            result = cursor.fetchone()
-            return dict(result) if result else None
+    return execute_query_dict(query, params, fetch="one")
 
 
 def get_all_sales(

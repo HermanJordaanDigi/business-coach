@@ -1,19 +1,76 @@
 """
 Database utility functions for the Business Coaching Analytics project.
-Provides reusable connection and query execution helpers.
+Provides reusable connection and query execution helpers with connection pooling.
 """
 import psycopg2
 from psycopg2.extras import RealDictCursor
+from psycopg2.pool import ThreadedConnectionPool
 import pandas as pd
 from contextlib import contextmanager
 from typing import List, Dict, Any, Optional
-from config import DB_CONFIG
+import logging
+from src.config import DB_CONFIG
+
+# Configure logging
+logger = logging.getLogger(__name__)
+
+# Global connection pool
+_connection_pool: Optional[ThreadedConnectionPool] = None
+
+
+def init_connection_pool(minconn: int = 2, maxconn: int = 10) -> ThreadedConnectionPool:
+    """
+    Initialize the database connection pool.
+
+    Args:
+        minconn: Minimum number of connections to maintain
+        maxconn: Maximum number of connections allowed
+
+    Returns:
+        ThreadedConnectionPool instance
+
+    Note:
+        This is called automatically by get_db_connection().
+        You can call it explicitly to customize pool settings.
+    """
+    global _connection_pool
+
+    if _connection_pool is None:
+        try:
+            _connection_pool = ThreadedConnectionPool(
+                minconn=minconn,
+                maxconn=maxconn,
+                host=DB_CONFIG["host"],
+                port=DB_CONFIG["port"],
+                user=DB_CONFIG["user"],
+                password=DB_CONFIG["password"],
+                database=DB_CONFIG["database"]
+            )
+            logger.info(f"Database connection pool initialized (min={minconn}, max={maxconn})")
+        except psycopg2.Error as e:
+            logger.error(f"Failed to initialize connection pool: {e}")
+            raise
+
+    return _connection_pool
+
+
+def close_connection_pool():
+    """
+    Close all connections in the pool.
+    Call this when shutting down the application.
+    """
+    global _connection_pool
+
+    if _connection_pool is not None:
+        _connection_pool.closeall()
+        _connection_pool = None
+        logger.info("Database connection pool closed")
 
 
 @contextmanager
 def get_db_connection(cursor_factory=None):
     """
-    Context manager for database connections.
+    Context manager for database connections using connection pooling.
     Automatically handles connection closing and error rollback.
 
     Args:
@@ -28,25 +85,29 @@ def get_db_connection(cursor_factory=None):
             cursor.execute("SELECT * FROM sales")
             results = cursor.fetchall()
     """
+    pool = init_connection_pool()
     conn = None
+
     try:
-        conn = psycopg2.connect(
-            host=DB_CONFIG["host"],
-            port=DB_CONFIG["port"],
-            user=DB_CONFIG["user"],
-            password=DB_CONFIG["password"],
-            database=DB_CONFIG["database"],
-            cursor_factory=cursor_factory
-        )
+        conn = pool.getconn()
+
+        # Set cursor factory if provided
+        if cursor_factory:
+            conn.cursor_factory = cursor_factory
+
         yield conn
         conn.commit()
+
     except psycopg2.Error as e:
         if conn:
             conn.rollback()
-        raise e
+        logger.error(f"Database error: {e}")
+        raise
+
     finally:
         if conn:
-            conn.close()
+            # Return connection to pool instead of closing
+            pool.putconn(conn)
 
 
 def execute_query(query: str, params: Optional[tuple] = None, fetch: str = "all") -> List[Any]:
@@ -225,16 +286,17 @@ def test_connection() -> bool:
 
     Example:
         if test_connection():
-            print("Database connection successful")
+            logger.info("Database connection successful")
     """
     try:
         with get_db_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT 1")
             result = cursor.fetchone()
+            logger.info("Database connection test successful")
             return result[0] == 1
     except Exception as e:
-        print(f"Connection test failed: {e}")
+        logger.error(f"Connection test failed: {e}")
         return False
 
 
